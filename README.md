@@ -1,8 +1,8 @@
-# Savvy Coders Project Boilerplate Starter Kit
+# SWIC JS Students Project Boilerplate Starter Kit
 
 ## Overview
 
-This template repository contains several opinionated, 'starter' files and settings to help Savvy Coder students focus more time and energy on learning how to code and/or craft 'business logic' for projects and less time on configurations.
+This template repository contains several opinionated, 'starter' files and settings to help SWIC JS students focus more time and energy on learning how to code and/or craft 'business logic' for projects and less time on configurations.
 
 In addition to a '.gitignore' and some VS Code specific extensions and settings, it includes the 'recommended' settings for:
 
@@ -22,4 +22,4 @@ Now, enter `code .` to open this project in VS Code, and look for a prompt to 'i
 
 Update this README and make any other initial changes or 🌱 files, etc. Go ahead and do your usual `git` steps, etc. etc. etc.
 
-**Note:** This is a template repository, no need to 'fork it.
+**Note:** This is a template repository, no need to 'fork it. Just click 'Use This Template.'
