@@ -1,13 +1,13 @@
 {
-  "name": "savvy-starter",
+  "name": "swic-starter",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "serve": "browser-sync start --server --files '*.html, *.css, *.js'"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["js"],
+  "author": "Taylor Wood",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.26.7",
