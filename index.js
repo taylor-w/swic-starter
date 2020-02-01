@@ -10,6 +10,15 @@ const myString = "string"; // String data stored in memory using REFERENCE.
 let myNum = 24; // Number data with 'let' variable assignment. This allows reassignment.
 true; // Boolean Data - 1
 false; // Boolean Data - 0
+myNum = 8; // Reassignment of myNum let variable.
+
+const theTruth =
+  "On and off the court," +
+  myNum +
+  "and" +
+  myNum(8) +
+  "will always be remembered.";
+true;
 
 null;
 undefined;
