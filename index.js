@@ -12,13 +12,21 @@ true; // Boolean Data - 1
 false; // Boolean Data - 0
 myNum = 8; // Reassignment of myNum let variable.
 
-const theTruth =
-  "On and off the court," +
-  myNum +
-  "and" +
-  myNum(8) +
-  "will always be remembered.";
-true;
+// Creating variables for concatanation
+const name = "Taylor";
+let numOfYearsCoding = 1;
 
-null;
-undefined;
+// Should be pretty comfortable with what's going on here. Object(dot notation).method("argument")
+// Dot Notation opens up object and shows key of methods. Methods then invoke arguments.
+console.log("Hello World!");
+
+// First COMMIT HW
+// const theTruth =
+//   "On and off the court," +
+//   myNum +
+//   "and" +
+//   myNum(8) +
+//   "will always be remembered.";
+// true;
+// null;
+// undefined;
