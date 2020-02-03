@@ -1,20 +1,15 @@
-// Should be pretty comfortable with what's going on here. Object(dot notation).method("argument")
-// Dot Notation opens up object and shows key of methods. Methods then invoke arguments.
-console.log("Hello World!");
+// Tasks from Notion Text
+const timeOfDay = "Morning";
+let term = "Interpolation";
 
-// CONCATENATION OPERATOR is +. We use this to combine variables. Very familiar with this in C#
-const name = "Taylor";
-let numOfYearsCoding = 1;
-console.log(
-  "My name is " +
-    name +
-    " and I have been coding for " +
-    numOfYearsCoding +
-    " year(s)."
-);
+console.log(`Good ${timeOfDay}!`);
 
-// TEMPLATE LITERALS which is the &{} and it makes it easier to do INTERPOLATION
-// Remember you must you tildas for Template Literals. `
-console.log(
-  `${name} is what my mother chose for me as a name when she thought I was going to be a girl.`
-);
+// Keyword typeof tells us what type of data it is we are working with.
+// So we can have a template literal..
+console.log(`This would be an example of Template Literals.`);
+
+// However this would be an example of interpolation within a Template Literal
+console.log(`Hi, I am an example of ${term}.`);
+
+// COERCION is when JS will COERCE your data types into whatever if feels is appropriate.
+console.log("hello" + 22); // Exemplifies this
