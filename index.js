@@ -22,4 +22,17 @@ console.log(me.name);
 // me.age = 23;
 // console.log(me.age);
 
+// Example of nest objects
 console.log(me.pets.dog2);
+const player = {
+  name: "Username",
+  tag: "Clan Tag",
+  color: "Selected Color",
+  movement: {
+    walk: "slow",
+    run: "fast",
+    crouch: "down",
+    jump: "up"
+  }
+};
+console.log(player.movement.run);
