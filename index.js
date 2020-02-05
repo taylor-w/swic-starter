@@ -1,22 +1,30 @@
-// Tasks from Notion Text
-const timeOfDay = "Morning";
-let term = "Interpolation";
+const timeOfDay = "Good Morning, Vietnam!";
+const greeting = `Howdy Neighbors and ${timeOfDay}`;
+console.log(`${greeting}`);
 
-console.log(`Good ${timeOfDay}!`);
-
-// Keyword typeof tells us what type of data it is we are working with.
-// So we can have a template literal..
-console.log(`This would be an example of Template Literals.`);
-
-// However this would be an example of interpolation within a Template Literal
-console.log(`Hi, I am an example of ${term}.`);
-
-// COERCION is when JS will COERCE your data types into whatever if feels is appropriate.
-console.log("hello" + 22); // Exemplifies this, is also Implicit Coercion
-console.log(Number(false)); // Exemplifies Explicit Coercion
-console.log(Boolean(222));
-
-console.log(parseInt("123.45"));
-console.log(parseFloat("123.45"));
-// Implicit Coercion, JS does what it thinks is best. It reads the code as it sees fit.
-// Explicit Coercion involves the user determining what should be done to the data.
+let newVariable;
+console.log(typeof newVariable); // We should expect undefined variable.
+newVariable = "This variable was previously intentionally blank.";
+console.log(typeof newVariable); // We should expect new assignment to reflect string data type.
+// console.log(none); // 'none' is not a declared variable. Will result in broken execution.
+console.log(`${greeting}`); // Because reference in line 9 is not defined, code does not execute at all.
+const name = "Taylor";
+let favoriteSong = "SOMEBODY by IDK";
+let wage = 9.25;
+let age = 24;
+const onlyChild = false;
+let satisfied = false;
+let favoriteThing = "Life";
+console.log(typeof favoriteThing);
+favoriteSong = "BUSY by Saba";
+favoriteThing = 39;
+console.log(typeof favoriteThing);
+age = 25;
+wage = 25;
+satisfied = true;
+console.log(
+  `${name}'s football number was ${favoriteThing}, and would love to work for ${wage} an hour.`
+);
+console.log(
+  "This is an example of concatenation using " + "the plus sign operator."
+);
