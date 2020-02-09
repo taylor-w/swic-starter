@@ -1,38 +1,21 @@
-// console.log(something); // Is NOT in memory
-console.log(undefined); // Is a PRIMITIVE TYPE that signifies the absence of ANY value.
-
-let x;
-console.log(x); // Example of being undefined. We have the variable, but not assignment.
-// NULL represents a deliberate assignment of 'nothing.' It is also a PRIMITIVE type.
-x = null;
-
-// THIS is a an OBJECT assigned to a const variable, 'me.'
-const me = {
-  name: "Taylor",
+const bio = {
+  name: {
+    fName: "Taylor",
+    mName: "Johnson",
+    lName: "Wood"
+  },
   age: 24,
-  pets: {
-    dog1: "Guiness",
-    dog2: "Indie"
+  hair: "brown",
+  height: "70 Inches",
+  weight: 175,
+  addFiveYears() {
+    return bio.age + 5;
   }
 };
-console.log(me.name);
-// Everything that's not a PRIMITIVE data type, is an OBJECT. This OBJECT structure is why .(dot) notation is so prevalent in the JS language.
-
-// Create a new key value pair with age = 23.
-// me.age = 23;
-// console.log(me.age);
-
-// Example of nest objects
-console.log(me.pets.dog2);
-const player = {
-  name: "Username",
-  tag: "Clan Tag",
-  color: "Selected Color",
-  movement: {
-    walk: "slow",
-    run: "fast",
-    crouch: "down",
-    jump: "up"
-  }
-};
-console.log(player.movement.run);
+console.log(bio);
+console.log(bio.age);
+console.log(bio.name.fName, bio.name.mName, bio.name.lName);
+console.log(bio.age + bio.weight);
+bio.hair = "blonde";
+console.log(bio.hair);
+console.log(bio.addFiveYears(bio.age));
