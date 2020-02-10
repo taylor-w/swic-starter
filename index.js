@@ -1,14 +1,10 @@
-let age = 21;
-const legalAge = 18;
-const rentalAge = 25;
+// The dynamic conversion of data is helpful... example:
+const name = "";
 
-if (age < legalAge) {
-  console.log("You can't rent a car, my friend!");
+// quickly check to see if a value is 'truthy' or 'falsey'
+// For example, if I left the 'name' blank...
+if (name) {
+  console.log("User has entered value for name field");
 } else {
-  console.log("Hey, you can rent a car!");
-  if (age < rentalAge) {
-    console.log("Renting a car is going to be expensive, my friend!");
-  } else {
-    console.log("Renting a car won't be too bad, my friend!");
-  }
+  console.error("User has left name field blank");
 }
