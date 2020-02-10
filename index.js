@@ -1,21 +1,14 @@
-// Examples of Modulus (along with other operators)
-//    console.log(5 % 2);
-// Examples of Relational Operators (in Notion Text)
-// Relational or COMPARISON OPERATORS always yields BOOLEANS
-//    console.log(39 < 23);
-// to check if 2 things are considered to be equal...
-// It checks the VALUE and TYPE
-//    console.log(2 === 3);
-//    console.log(2 === 2);
-// A single = means ASSIGNMENT, while a === means CHECK for both VALUE and TYPE (STRICT EQUALITY)
-//    console.log(2 !== 3); // Obviously !== means not equal
+let age = 21;
+const legalAge = 18;
+const rentalAge = 25;
 
-// EXPRESSION is anything that evaluates to a value
-// STATEMENTS combine EXPRESSIONS with keywords and other syntax
-const x = 3;
-if (x === 3) {
-  // {}s establish SCOPE of the code.
-  console.log("X is 3!");
+if (age < legalAge) {
+  console.log("You can't rent a car, my friend!");
 } else {
-  console.log("X is not 3!");
+  console.log("Hey, you can rent a car!");
+  if (age < rentalAge) {
+    console.log("Renting a car is going to be expensive, my friend!");
+  } else {
+    console.log("Renting a car won't be too bad, my friend!");
+  }
 }
