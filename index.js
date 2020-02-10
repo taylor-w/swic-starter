@@ -1,28 +1,21 @@
-const bio = {
-  name: {
-    fName: "Taylor",
-    mName: "Johnson",
-    lName: "Wood"
-  },
-  age: 24,
-  hair: "brown",
-  height: "70 Inches",
-  weight: 175,
-  addFiveYears() {
-    return bio.age + 5;
-  }
-};
-console.log(bio);
-console.log(bio.age);
-console.log(bio.name.fName, bio.name.mName, bio.name.lName);
-console.log(bio.age + bio.weight);
-bio.hair = "blonde";
-console.log(bio.hair);
-console.log(bio.addFiveYears(bio.age));
+// Examples of Modulus (along with other operators)
+//    console.log(5 % 2);
+// Examples of Relational Operators (in Notion Text)
+// Relational or COMPARISON OPERATORS always yields BOOLEANS
+//    console.log(39 < 23);
+// to check if 2 things are considered to be equal...
+// It checks the VALUE and TYPE
+//    console.log(2 === 3);
+//    console.log(2 === 2);
+// A single = means ASSIGNMENT, while a === means CHECK for both VALUE and TYPE (STRICT EQUALITY)
+//    console.log(2 !== 3); // Obviously !== means not equal
 
-console.log(bio.name.fName); // This is an example of dotNotation
-console.log(bio["name"]); // This is an example of bracketNotation - MUST have quotations if        referencing key within object.
-
-const NewKey = "age";
-
-console.log(bio[NewKey]); // This is interesting. We are using bracket notation to utilize our new const in order to search within our object. So our log is looking for our bio object, then using our new const, 'NewKey' which is "age" and looks for "age" within bio.
+// EXPRESSION is anything that evaluates to a value
+// STATEMENTS combine EXPRESSIONS with keywords and other syntax
+const x = 3;
+if (x === 3) {
+  // {}s establish SCOPE of the code.
+  console.log("X is 3!");
+} else {
+  console.log("X is not 3!");
+}
