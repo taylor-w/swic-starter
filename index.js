@@ -1,18 +1,24 @@
-console.log(49 === 49); // True because primitive data is compared by value.
+// PASS by VALUE.
+let x = 3;
 
-const x = {
-  name: "taylor"
+let y = x;
+
+console.log(y);
+
+x = 4;
+
+console.log(y);
+// PRIMITIVE DATA TYPES CANNOT MUTATE!!
+// Y is given the value of X, X changes, but Y's value is still the value of X the time of assignment.
+
+// PASS by REFERENCE
+const a = {
+  name: "taylor",
+  gender: "male"
 };
+// B will point to the same memory address as A.
+// What happens to 1 will affect the other.
+const b = a;
+a.name = "Woody";
 
-const y = {
-  name: "taylor"
-};
-
-console.log(x === y); // False because objects are compared by REFERENCE.
-// X and Y have different memory addresses.
-
-const z = x;
-
-console.log(x === z);
-
-// Moral of the story, do not use triple === for objects, composite data types.
+console.log(b.name);
