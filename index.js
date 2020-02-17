@@ -1,24 +1,29 @@
-// PASS by VALUE.
-let x = 3;
+let a = 39;
+let b = a;
+console.log(b);
 
-let y = x;
+a = 14;
+console.log(b);
 
-console.log(y);
+b = a;
+console.log(b);
+// Notice how PRIMITIVE handle PASS of VALUE.
 
-x = 4;
-
-console.log(y);
-// PRIMITIVE DATA TYPES CANNOT MUTATE!!
-// Y is given the value of X, X changes, but Y's value is still the value of X the time of assignment.
-
-// PASS by REFERENCE
-const a = {
-  name: "taylor",
-  gender: "male"
+const x = {
+  name: "Taylor",
+  gender: "Male"
 };
-// B will point to the same memory address as A.
-// What happens to 1 will affect the other.
-const b = a;
-a.name = "Woody";
+const y = x;
+console.log(y);
 
-console.log(b.name);
+const z = {
+  name: "Taylor",
+  gender: "Male"
+};
+console.log(x === y);
+console.log(x === z);
+
+x.name = "Woody";
+console.log(y.name);
+console.log(z.name);
+// Notice how COMPOSITE handle PASS of REFERENCE.
