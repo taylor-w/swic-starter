@@ -1,29 +1,24 @@
-let a = 39;
-let b = a;
-console.log(b);
+let x = 1;
+let sum = 0;
 
-a = 14;
-console.log(b);
+while (x <= 10) {
+  sum = sum + x;
+  x++;
+}
+console.log(sum);
 
-b = a;
-console.log(b);
-// Notice how PRIMITIVE handle PASS of VALUE.
-
-const x = {
-  name: "Taylor",
-  gender: "Male"
-};
-const y = x;
-console.log(y);
-
-const z = {
-  name: "Taylor",
-  gender: "Male"
-};
-console.log(x === y);
-console.log(x === z);
-
-x.name = "Woody";
-console.log(y.name);
-console.log(z.name);
-// Notice how COMPOSITE handle PASS of REFERENCE.
+let num = 1;
+let total = 100;
+while (num <= total) {
+  if (num % 3 === 0 && num % 5 === 0) {
+    console.log("FizzBuzz!");
+  } else if (num % 3 === 0) {
+    console.log("Fizz!");
+  } else if (num % 5 === 0) {
+    console.log("Buzz!");
+  } else {
+    console.log(num);
+  }
+  num += 1;
+}
+// Examples of While loops. Notice Initializing, Conditional placements, and Incremention.
