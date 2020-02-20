@@ -15,7 +15,7 @@
   "editor.smoothScrolling": true,
   "editor.tabSize": 2,
   "editor.wordWrap": "wordWrapColumn",
-  "editor.wordWrapColumn": 100,
+  "editor.wordWrapColumn": 80,
   "files.autoSave": "onFocusChange",
   "files.eol": "\n",
   "files.insertFinalNewline": true,
