@@ -1,23 +1,17 @@
-// Log the numbers from 1 to 10.
-// FOR limits use of local variable
-for (let i = 1; i <= 10; i++) {
-  console.log(i);
+// IMPLICIT CONVERSION - Where Javascript changes things for you, even if you don't want it.
+
+// If first EXPRESSION is 'truthy,' then we don't EVALUATE the right hand-side.
+
+// If 'prompt' RETURNs and empty STRING - b/c of the '||' this will be
+// IMPLICITLY CONVERTED to 'false.'
+
+// 'game' will be a STRING, but it could be blank.
+let game = prompt("What game are you playing?");
+
+// If 'game' is blank, then '!' will convert to a Boolean (NOT FALSE)
+// If 'game' is not blank, then '!' will convert to a Boolean (NOT TRUE)
+while (!game) {
+  game = prompt("What game are you playing?");
 }
-// Log Fizz, Buzz, FizzBuzz!
-for (let i = 0; i <= 100; i++) {
-  if (i % 3 === 0 && i % 5 === 0) {
-    console.log("FizzBuzz!");
-  } else if (i % 3 === 0) {
-    console.log("Fizz!");
-  } else if (i % 5 === 0) {
-    console.log("Buzz!");
-  } else {
-    console.log(i);
-  }
-}
-// Log Summonation
-let total = 0;
-for (let i = 1; i <= 10; i++) {
-  total += i;
-  console.log(total);
-}
+
+console.log(name);
