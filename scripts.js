@@ -1,17 +1,7 @@
-// IMPLICIT CONVERSION - Where Javascript changes things for you, even if you don't want it.
+let age = prompt("What is your age?");
 
-// If first EXPRESSION is 'truthy,' then we don't EVALUATE the right hand-side.
+age = Number(age);
 
-// If 'prompt' RETURNs and empty STRING - b/c of the '||' this will be
-// IMPLICITLY CONVERTED to 'false.'
-
-// 'game' will be a STRING, but it could be blank.
-let game = prompt("What game are you playing?");
-
-// If 'game' is blank, then '!' will convert to a Boolean (NOT FALSE)
-// If 'game' is not blank, then '!' will convert to a Boolean (NOT TRUE)
-while (!game) {
-  game = prompt("What game are you playing?");
+if (!age) {
+  alert("This is not a number!");
 }
-
-console.log(name);
