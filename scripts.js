@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-let age = prompt("What is your age?");
+let game = prompt("What is your age?");
 
 age = Number(age);
 

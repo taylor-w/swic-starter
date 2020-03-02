@@ -1,36 +1,19 @@
-let x = 1;
-let sum = 0;
+const myArray = ["String", 23, "Another String", true, false];
+const gameInfo = [
+  { gameName: ["Halo Reach"] },
+  { gameMode: ["Team Slayer", "Capture the Flag", "King of the Hill"] },
+  { gameMap: ["Countdown", "Forge Work", "Zealot"] }
+];
+console.log(myArray[3]);
+console.log(gameInfo.length);
 
-while (x <= 10) {
-  sum = sum + x;
-  x++;
-}
-console.log(sum);
+// Like other ARRAY knowledge, INDEX number is always 1 great than highest index -- Due to starting with 0
+// ARRAY index values are mutable. I.E, you CAN change the value of an item under an INDEX.
+// You can access ARRAY INDEX that wasn't EXPLICITLY entered, and the ARRAY will EXPAND.
 
-let num = 1;
-let total = 100;
-// (!0) === True
-while (num <= total) {
-  if (!(num % 3) && !(num % 5)) {
-    console.log("FizzBuzz!");
-  } else if (!(num % 3)) {
-    console.log("Fizz!");
-  } else if (!(num % 5)) {
-    console.log("Buzz!");
-  } else {
-    console.log(num);
-  }
-  num += 1;
+//TODO: Log Array Index of Key within Array.
+console.log(gameInfo[1].gameMode[1]);
+//TODO: Iterate over data and log every name.
+for (let x = 0; x <= gameInfo.length - 1; x++) {
+  console.log(gameInfo[x]);
 }
-console.log(Boolean(0));
-console.log(Boolean(1));
-// Examples of While loops. Notice Initializing, Conditional placements, and Incremention.
-/**
- * '!' is the NOT operator. It's a UNARY OPERATOR.
- * Using this in front of any data type (such as a number)
- * will immediately convert that data type into a Boolean.
- * Then, that value will be inversed as per the NOT operator.
- */
-console.log(!0);
-console.log(!"hello");
-console.log(!"");
