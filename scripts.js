@@ -1,12 +1,10 @@
-// FUNCTION look a lot like patterns seen with 'for', 'while', 'if'...
-const logLongMsg = function() {
-  console.log(
-    "Hello! Don't mind me, just logging a long message with the help of a function!"
-  );
+const sayHello = function sayHello() {
+  // Let's 'log' if we received any arguments.
+  console.log(arguments);
 };
 
-logLongMsg();
+/* Example of passing arguments into function. */
+sayHello("hello", "by", "hi", "world");
 
-/* Take note of the syntax, which should look familiar. Also notice
-the way in which you call the function. It looks as to be expected based
-upon previous programing knowledge. */
+/*Keyword argument is used to show number of arguments within function.
+Notice the number of arguments starts with number 0 when logged. */
