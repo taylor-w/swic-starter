@@ -1,37 +1,19 @@
-//TODO: Using only the functions above, and no operators, calculate the value of tripling 5, multiplying that by 12, dividing that by 2 and then finding the remainder of dividing that by 3.
+// Sum the numbers in this ARRAY.
+const nums = [51, 22, 33, 44, 511, 65, 7, 8, 9, 10];
 
-function tripler(num) {
-  return num * 3;
+function sumDaNumbers(nums) {
+  let total = 0;
+
+  for (let i = 0; i < nums.length; i++) {
+    total += nums[i];
+  }
+
+  return total;
 }
 
-function multiply(num1, num2) {
-  return num1 * num2;
-}
+const totalOfNums = sumDaNumbers(nums);
+console.log(totalOfNums);
 
-function divide(num1, num2) {
-  return num1 / num2;
-}
-
-function remainder(num1, num2) {
-  return num1 % num2;
-}
-
-let tripled = tripler(5);
-console.log(tripled);
-let product = multiply(tripled, 12);
-console.log(product);
-let quotient = divide(product, 2);
-console.log(quotient);
-let remain = remainder(quotient, 3);
-console.log(remain);
-
-let answer = remainder(divide(multiply(tripler(5), 12), 2), 3);
-console.log(answer);
-
-/* Example above demonstrates two major factors.
-The first being function call. Very direct, clean use
-of function declaration and calling to retrieve function
-and get answer.
-The second being scope. More specifically on lines 28, 29, we
-display parent/child scope to retrieve answers of functions
-and display them within other functions. */
+/* Great example of array data being summed with a function.
+The function nests a loop for the data, and calculates total per increment
+of index, 'i'. */
