@@ -1,29 +1,37 @@
-const sayHello = function sayHello() {
-  console.log(arguments);
-};
+//TODO: Refactor commented functions into function declarations
+// const greet = function() {
+//   console.log("Hello!");
+// };
 
-sayHello("hello", "bye", "hi", "world");
-// We've done this before, but this just uses 'arguments' keyword to log arguments passed by function.
+function greet() {
+  console.log("Hello!");
+}
+greet();
 
-const sayBye = function(...args) {
-  console.log(args[0]);
-};
+// const threeModTwo = function() {
+//   console.log(3 % 2);
+// };
 
-sayBye("Goodbye, my friend.");
-// Above we have the rest operator. It's notified by the '...'
-// We make up a word to hold the 'array' of arguments. ex. 'args'.
+function threeModTwo() {
+  console.log(3 % 2);
+}
+threeModTwo();
 
-const greeting = function greeting(arg1, arg2, arg3) {
-  console.log(arg1, arg2, arg3);
-};
+// let age = 18;
+// const checkDrivingAge = function() {
+//   if (age >= 16) {
+//     console.log(true);
+//   } else {
+//     console.log(false);
+//   }
+// };
 
-greeting("howdy", "heyheyhey", "whadup");
-// Assigning our own parameters, we can call to a specified parameter we create.
-
-const introduction = function(n) {
-  console.log(`Hi ${n}, my name's Taylor.`);
-};
-const name = prompt("What is your name?");
-
-introduction(name);
-// Another example of a parameter (n) that we created for the function 'introduction'.
+let age = 18;
+function checkDrivingAge() {
+  if (age >= 16) {
+    console.log(true);
+  } else {
+    console.log(false);
+  }
+}
+checkDrivingAge();
