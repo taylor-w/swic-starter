@@ -1,37 +1,14 @@
-//TODO: Refactor commented functions into function declarations
-// const greet = function() {
-//   console.log("Hello!");
-// };
-
-function greet() {
-  console.log("Hello!");
+const name = "Taylor";
+function greet(n) {
+  return `Hello ${n}`;
 }
-greet();
+const greeting = greet(name);
+console.log(greeting);
 
-// const threeModTwo = function() {
-//   console.log(3 % 2);
-// };
-
-function threeModTwo() {
-  console.log(3 % 2);
+function greeter() {
+  return "Hello";
 }
-threeModTwo();
-
-// let age = 18;
-// const checkDrivingAge = function() {
-//   if (age >= 16) {
-//     console.log(true);
-//   } else {
-//     console.log(false);
-//   }
-// };
-
-let age = 18;
-function checkDrivingAge() {
-  if (age >= 16) {
-    console.log(true);
-  } else {
-    console.log(false);
-  }
-}
-checkDrivingAge();
+const greeting2 = greeter();
+console.log(`${greeting2}, nice to meet you.`);
+// Example of return values
+// Notice function being assigned to a variable so they can be invoked at will.
