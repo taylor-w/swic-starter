@@ -1,33 +1,51 @@
-// ARROW SYNTAX
+// Final Function Thoughts and Homework
 
 // Function Declaration
-function card(age) {}
+function sayingGenerator() {
+  const phrase = "Heeeeey, it's the Fonz."; // Locally scoped variable
+  const p = "heck";
+  console.log(p);
+  return phrase;
+}
 
-// Function Expression
-const card2 = function card(age) {
-  age >= 21;
-};
+// console.log(phrase); // Error because we are trying to pull a local variable of 'sayingGenerator()' to a global setting.
 
-// Arrow Syntax
-const cardArrow = age => age >= 21;
-/* This arrow syntax allows one line code when there is only a single
-statement in the function. */
+const saying = sayingGenerator();
+// saying(); // Will error because function is not a function. No need to invoke();
+saying;
+console.log(saying);
 
-/* Notice how the arrow => replaces the function keyword */
-/* It's also important to note that the RETURN keyword is even more important than
-before when using arrow syntax. Without that RETURN keyword, nothing is returned, so
-the logged results are 'undefined'. */
+function valueLogger(value) {
+  console.log(value);
+}
 
-const adder = (num1, num2) => {
-  num1 + num2;
-};
-const correctAdder = (num1, num2) => {
+valueLogger(); // Undefined because no argument is being passed.
+
+valueLogger("Howdy ho, neighborino!");
+
+valueLogger(3 + 7); // Will actually give value
+
+valueLogger(3, 7);
+
+function doubler(num) {
+  return num * 2;
+}
+
+const shouldBeTen = doubler(5);
+console.log(shouldBeTen);
+
+function doubleValueLogger(value1, value2) {
+  console.log(value1, value2);
+}
+
+doubleValueLogger("hello", "how are you");
+
+doubleValueLogger("hello");
+
+function add(num1, num2) {
   return num1 + num2;
-};
+}
 
-console.log(cardArrow(11));
-console.log(adder(2, 3));
-console.log(correctAdder(2, 3));
+const sum = add(7, 12);
 
-/* The Arrow syntax requires less keystrokes, is up-to-date with ES2015, and is
-more importantly, MR.Cleaaaan. */
+console.log(sum);
