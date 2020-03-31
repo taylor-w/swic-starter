@@ -1,19 +1,13 @@
-// Sum the numbers in this ARRAY.
-const nums = [51, 22, 33, 44, 511, 65, 7, 8, 9, 10];
+// TODO: Example of Summation using a function that requires a start and end point.
 
-function sumDaNumbers(nums) {
+// Function
+function summation(start, end) {
   let total = 0;
-
-  for (let i = 0; i < nums.length; i++) {
-    total += nums[i];
+  for (let i = start; i <= end; i++) {
+    total += i;
   }
-
   return total;
 }
 
-const totalOfNums = sumDaNumbers(nums);
-console.log(totalOfNums);
-
-/* Great example of array data being summed with a function.
-The function nests a loop for the data, and calculates total per increment
-of index, 'i'. */
+// Log Function
+console.log(summation(14, 39));
