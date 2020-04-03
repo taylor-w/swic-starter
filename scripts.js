@@ -59,3 +59,10 @@ MultiplayerGame.prototype.getMapDetails = function() {
 
 // Log Results
 console.log(haloReach.getMapDetails());
+
+// Use Prototype to Create Add Method
+MultiplayerGame.prototype.addMapCallout = function(mapCallout) {
+  let i = 0;
+  for (i = 0; i < this.callouts.length; i++) {}
+  this.callouts[i] = mapCallout;
+};
