@@ -49,3 +49,10 @@ const haloReach = new MultiplayerGame(
   "Countdown",
   "PLACEHOLDER"
 );
+
+// Use Prototype to Create Method
+MultiplayerGame.prototype.getMapDetails = function() {
+  let i = 0;
+  for (i = 0; i < this.callouts.length; i++) {}
+  return `${this.map} has the ${this.gamemode} gamemode and contains ${i} callouts: ${this.callouts}.`;
+};
