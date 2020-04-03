@@ -1,49 +1,25 @@
-// Functions Becoming Methods
+// Constructor Functions
 
-/* A function in the global scope is a function, but becomes a method when
-scoped within an object. */
+/* This isn't the first time we've come across the 'constructor' word in
+programming. C# has it, when you create a new instance of some object, and
+it seems to be used likewise here in Javascript.*/
 
-// Example
-function adder(num1, num2) {
-  return num1 + num2;
+function Person(fname, lname) {
+  this.fname = fname;
+  this.lname = lname;
+
+  this.getFullName = function() {
+    return `${fname} ${lname}`;
+  };
 }
-console.log(`This is a function ${adder(3, 2)}`);
+console.log(Person);
+/* At this point, it's just a function. It's being set up to create or
+CONSTRUCT new objects */
 
-const basicMath = {
-  subtractor: function(num1, num2) {
-    return num1 - num2;
-  }
-};
-console.log(`This is a method ${basicMath.subtractor(3, 2)}`);
-
-/* Some syntax changes when functions become methods, but the process and rules of objects
-are the same as before. How we reference methods within objects, how they make copies of
-primitive data but make reference copies of objects. Nearly every rule as we know it to this
-juncture, still holds water. */
-
-/* NOTE: 'this' is a keyword that references another property within an object with that property
-is going to be used by a method within the SAME object. With other languages and how we've been exposed to keyword 'this', it makes total sense. */
-
-// Example
-const me = {
-  age: 24,
-  weight: 175,
-  hair: "brown",
-  getOlder: function(years) {
-    return this.age + years;
-  },
-  getYounger: function(years) {
-    return this.age - years;
-  },
-  gainWeight: function(weight) {
-    return this.weight + weight;
-  },
-  loseWeight: function(weight) {
-    return this.weight - weight;
-  }
-};
-console.log(me.getOlder(5));
-console.log(me.gainWeight(10));
-console.log("Found the Fountain of Youth");
-console.log(me.getYounger(2));
-console.log(me.loseWeight(5));
+const taylor = new Person("Taylor", "Wood");
+console.log(taylor);
+/* Now we have create a new INSTANCE of the Person function with the keyword 'new'.
+Notice the log of 'taylor'. It shows the same format of contents within 'Person',
+but grabbed the values provided from 'taylor' because the 'this' keyword within the
+constructor function. */
+console.log(taylor.getFullName());
