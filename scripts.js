@@ -6,3 +6,11 @@ function MultiplayerGame(playlist, gamemode, map, callouts) {
   this.map = map;
   this.callouts = callouts;
 }
+
+// New Instance of Constructor
+const haloReach = new MultiplayerGame(
+  "Team Hardcore",
+  "Team Slayer",
+  "Countdown",
+  "PLACEHOLDER"
+);
