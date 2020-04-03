@@ -56,3 +56,6 @@ MultiplayerGame.prototype.getMapDetails = function() {
   for (i = 0; i < this.callouts.length; i++) {}
   return `${this.map} has the ${this.gamemode} gamemode and contains ${i} callouts: ${this.callouts}.`;
 };
+
+// Log Results
+console.log(haloReach.getMapDetails());
