@@ -66,3 +66,7 @@ MultiplayerGame.prototype.addMapCallout = function(mapCallout) {
   for (i = 0; i < this.callouts.length; i++) {}
   this.callouts[i] = mapCallout;
 };
+
+// Log New Method and Check Results
+haloReach.addMapCallout("TOP MID");
+console.log(haloReach.getMapDetails());
