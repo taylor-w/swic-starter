@@ -70,3 +70,10 @@ MultiplayerGame.prototype.addMapCallout = function(mapCallout) {
 // Log New Method and Check Results
 haloReach.addMapCallout("TOP MID");
 console.log(haloReach.getMapDetails());
+
+// Override Prototype
+haloReach.addMapCallout = function() {
+  return "Just overidding a prototype method";
+};
+// Log Prototype Override
+console.log(haloReach.addMapCallout());
