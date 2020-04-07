@@ -31,3 +31,14 @@ mapCallouts.shift(); // SHIFT removes first element from array, shifting element
 console.log(mapCallouts);
 // Check value RETURN from SHIFT
 console.log(mapCallouts.shift());
+
+// UNSHIFT METHOD
+// Log
+console.log(mapCallouts);
+// Array Prototype Function: UNSHIFT
+mapCallouts.unshift("mid"); // UNSHIFT adds element to first spot in array, shifting elements
+// to  right
+// Log
+console.log(mapCallouts);
+// Check value RETURN from UNSHIFT
+console.log(mapCallouts.unshift("rockets"));
