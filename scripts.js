@@ -55,3 +55,5 @@ console.log(mapCallouts.splice(2, 1, "shotty"));
 
 // Log
 console.log(mapCallouts);
+
+/* Final Thoughts: There's a remarkable amount of methods that come with the Array object. With some of these methods, creation of sorting algorithms is definitely possible. Always worth seeing what these methods return, provides more utility. */
