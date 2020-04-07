@@ -1,28 +1,40 @@
-/* Thoughts: There's a remarkable amount of methods that come with the Array object. With some of these methods, creation of sorting algorithms is definitely possible. Always worth seeing what these methods return, provides more utility. */
+// Array Method Practice
+const strAndNumArr = [1, 2, "Hello", 3, 4, "World", 5, "YoYo!"];
+const strArr = [];
+const numArr = [];
 
-// CONCAT METHOD
-const arr1 = [1, 2, 3, 7, 8];
-const arr2 = [4, 5, 6];
-const arr3 = arr1.concat(arr2);
+for (let i = 0; i < strAndNumArr.length; i += 1) {
+  if (typeof strAndNumArr[i] === "string") {
+    strArr.push(strAndNumArr[i]);
+  } else {
+    numArr.push(strAndNumArr[i]);
+  }
+}
 
-console.log(arr1);
-console.log(arr2);
-console.log(arr3);
-console.log(arr1.concat(arr2));
-/* Potential Merge Sort Algorithmic use? */
+console.log(strArr);
+console.log(numArr);
 
-// INCLUDES METHOD
-/* Similar to C#, boolean value */
-console.log(arr3.includes(8));
-console.log(arr3.includes(4));
+// indexOf
+// lastIndexOf
+// includes
 
-// SLICE METHOD
-/* Takes copy of array from (first point, to count) */
-arr1.slice(1);
-console.log(arr1.slice(1));
-console.log(arr1);
-arr1.slice(2, 4);
-console.log(arr1.slice(2, 4));
-console.log(arr1);
+/* Pretty familiar with these methods, a lot of practice
+utilizing this logic in other languages.*/
 
-/* SLICE doesn't mutate array data, but SPLICE does */
+// TODO: Replace 'strawberry' with 'pumpkin'
+// Array
+const fruitArr = ["apple", "pineapple", "banana", "strawberry", "orange"];
+
+// IF Element Exists
+if (fruitArr.includes("strawberry")) {
+  let strawIndex = fruitArr.indexOf("strawberry");
+  fruitArr.splice(strawIndex, 1, "pumpkin");
+} else {
+  console.log("element: strawberry not found.");
+}
+
+console.log(fruitArr);
+/* Load Index into new variable. NOTE: Could have used
+  lastIndexOf instead, like below.*/
+// fruitArr.splice(fruitArr.lastIndexOf("strawberry"), 1, "pumpkin");
+// console.log(fruitArr);
