@@ -42,3 +42,16 @@ mapCallouts.unshift("mid"); // UNSHIFT adds element to first spot in array, shif
 console.log(mapCallouts);
 // Check value RETURN from UNSHIFT
 console.log(mapCallouts.unshift("rockets"));
+
+// SPLICE METHOD
+// Log
+console.log(mapCallouts);
+// Array Prototype Function: SPLICE
+mapCallouts.splice(1, 0, "sniper"); // SPLICE adds/removes element at desired index
+// Log
+console.log(mapCallouts);
+// Check value RETURN from SPLICE
+console.log(mapCallouts.splice(2, 1, "shotty"));
+
+// Log
+console.log(mapCallouts);
