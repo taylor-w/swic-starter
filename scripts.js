@@ -10,10 +10,15 @@ function diceRoll(diceNum = 2, diceSides = 6) {
   for (let i = 0; i < diceNum; i++) {
     roll.push(getRanIntInclusive(1, diceSides));
   }
-
   return roll;
 }
 
+function dieValue(die1, die2, diceTotal) {
+  let roll = diceRoll();
+  die1 = roll[0];
+  die2 = roll[1];
+  diceTotal = die1 + die2;
+}
 // Craps game
 
 // Use bets for pass => roll will total 7 or 11
