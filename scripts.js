@@ -13,6 +13,11 @@ function diceRoll(diceNum = 2, diceSides = 6) {
   return roll;
 }
 
+let roll = diceRoll();
+console.log(die1);
+console.log(die2);
+let diceTotal = die1 + die2;
+
 function dieValue(die1, die2, diceTotal) {
   let roll = diceRoll();
   die1 = roll[0];
@@ -36,4 +41,4 @@ function dieValue(die1, die2, diceTotal) {
 // End Loop
 
 // Reward/Take 'bet' based on game outcome
-console.log(diceRoll(2, 6));
+console.log(dieValue());
