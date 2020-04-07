@@ -15,17 +15,10 @@ function diceRoll(diceNum = 2, diceSides = 6) {
 
 let roll = diceRoll();
 let die1 = roll[0];
-console.log(die1);
 let die2 = roll[1];
-console.log(die2);
 let diceTotal = die1 + die2;
 
-function dieValue(die1, die2, diceTotal) {
-  let roll = diceRoll();
-  die1 = roll[0];
-  die2 = roll[1];
-  diceTotal = die1 + die2;
-}
+function bet(pass = 7 || 11) {}
 // Craps game
 
 // Use bets for pass => roll will total 7 or 11
