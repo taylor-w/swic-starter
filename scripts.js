@@ -21,3 +21,13 @@ mapCallouts.pop(); // POP removes last element from array
 console.log(mapCallouts);
 // Check value RETURN from POP
 console.log(mapCallouts.pop()); // RETURNS Element it Removes
+
+// SHIFT METHOD
+// Log
+console.log(mapCallouts);
+// Array Prototype Function: SHIFT
+mapCallouts.shift(); // SHIFT removes first element from array, shifting elements to the left
+// Log
+console.log(mapCallouts);
+// Check value RETURN from SHIFT
+console.log(mapCallouts.shift());
