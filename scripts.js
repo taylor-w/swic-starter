@@ -14,7 +14,9 @@ function diceRoll(diceNum = 2, diceSides = 6) {
 }
 
 let roll = diceRoll();
+let die1 = roll[0];
 console.log(die1);
+let die2 = roll[1];
 console.log(die2);
 let diceTotal = die1 + die2;
 
