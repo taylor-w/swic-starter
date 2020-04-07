@@ -13,12 +13,28 @@ function diceRoll(diceNum = 2, diceSides = 6) {
   return roll;
 }
 
-let roll = diceRoll();
-let die1 = roll[0];
-let die2 = roll[1];
-let diceTotal = die1 + die2;
+function diceTotal(roll) {
+  roll = diceRoll();
+  let die1 = roll[0];
+  let die2 = roll[1];
+  return die1 + die2;
+}
 
-function bet(pass = 7 || 11) {}
+function pass(value) {
+  // Possible Outcomes
+  value = diceTotal();
+  let pass = 7 || 11;
+  let loss = 2 || 3 || 12;
+  let on = !pass && !loss;
+  if (value == pass) {
+    return "WINNER";
+  } else if (value == loss) {
+    return "LOSER";
+  } else {
+    on = value;
+    return on;
+  }
+}
 // Craps game
 
 // Use bets for pass => roll will total 7 or 11
