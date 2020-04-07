@@ -1,59 +1,28 @@
-// Using Different Methods of Array Prototype
-// Array
-const mapCallouts = ["top mid", "bot mid", "lift landing"];
+/* Thoughts: There's a remarkable amount of methods that come with the Array object. With some of these methods, creation of sorting algorithms is definitely possible. Always worth seeing what these methods return, provides more utility. */
 
-// PUSH METHOD
-// Log
-console.log(mapCallouts);
-// Array Prototype Function: PUSH
-mapCallouts.push("gold one"); // PUSH element into array
-// Log
-console.log(mapCallouts);
-// Check value RETURN from PUSH
-console.log(mapCallouts.push("gold one")); // RETURNS Array.length
+// CONCAT METHOD
+const arr1 = [1, 2, 3, 7, 8];
+const arr2 = [4, 5, 6];
+const arr3 = arr1.concat(arr2);
 
-// POP METHOD
-// Log
-console.log(mapCallouts);
-// Array Prototype Function: POP
-mapCallouts.pop(); // POP removes last element from array
-// Log
-console.log(mapCallouts);
-// Check value RETURN from POP
-console.log(mapCallouts.pop()); // RETURNS Element it Removes
+console.log(arr1);
+console.log(arr2);
+console.log(arr3);
+console.log(arr1.concat(arr2));
+/* Potential Merge Sort Algorithmic use? */
 
-// SHIFT METHOD
-// Log
-console.log(mapCallouts);
-// Array Prototype Function: SHIFT
-mapCallouts.shift(); // SHIFT removes first element from array, shifting elements to the left
-// Log
-console.log(mapCallouts);
-// Check value RETURN from SHIFT
-console.log(mapCallouts.shift());
+// INCLUDES METHOD
+/* Similar to C#, boolean value */
+console.log(arr3.includes(8));
+console.log(arr3.includes(4));
 
-// UNSHIFT METHOD
-// Log
-console.log(mapCallouts);
-// Array Prototype Function: UNSHIFT
-mapCallouts.unshift("mid"); // UNSHIFT adds element to first spot in array, shifting elements
-// to  right
-// Log
-console.log(mapCallouts);
-// Check value RETURN from UNSHIFT
-console.log(mapCallouts.unshift("rockets"));
+// SLICE METHOD
+/* Takes copy of array from (first point, to count) */
+arr1.slice(1);
+console.log(arr1.slice(1));
+console.log(arr1);
+arr1.slice(2, 4);
+console.log(arr1.slice(2, 4));
+console.log(arr1);
 
-// SPLICE METHOD
-// Log
-console.log(mapCallouts);
-// Array Prototype Function: SPLICE
-mapCallouts.splice(1, 0, "sniper"); // SPLICE adds/removes element at desired index
-// Log
-console.log(mapCallouts);
-// Check value RETURN from SPLICE
-console.log(mapCallouts.splice(2, 1, "shotty"));
-
-// Log
-console.log(mapCallouts);
-
-/* Final Thoughts: There's a remarkable amount of methods that come with the Array object. With some of these methods, creation of sorting algorithms is definitely possible. Always worth seeing what these methods return, provides more utility. */
+/* SLICE doesn't mutate array data, but SPLICE does */
