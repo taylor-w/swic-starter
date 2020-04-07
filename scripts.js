@@ -1,79 +1,10 @@
-// HW41
-// Constructor Function
-function MultiplayerGame(playlist, gamemode, map, callouts) {
-  this.playlist = playlist;
-  this.gamemode = gamemode;
-  this.map = map;
-  this.callouts = callouts;
-  // Fill Callouts as Array IF Condition is Met
-  if (this.map === "Countdown") {
-    this.callouts = [
-      "Blue Hall / Blue 1",
-      "Blue Window / Blue 2",
-      "Blue Needles / Blue 3",
-      "Blue Attic",
-      "Blue Vent",
-      "Bridge / Catwalk",
-      "Rockets",
-      "Blue Flag",
-      "Blue Healthpack",
-      "Blue Stairs",
-      "Blue Jetpack",
-      "Blue Drop",
-      "Sniper / S2",
-      "Lifts / S1",
-      "Bottom Mid / Mid",
-      "Blue Lift",
-      "Mid Lift",
-      "Camo / Balcony",
-      "Plasmas / Top Healthpack",
-      "Red Hall / Red 1",
-      "Red Window / Red 2",
-      "Red Needles / Red 3",
-      "Red Attic",
-      "Red Vent",
-      "Red Flag",
-      "Red Healthpack",
-      "Red Stairs",
-      "Red Jetpack",
-      "Red Drop",
-      "Red Lift"
-    ];
-  }
-}
+// Array is a FUNCTION CONSTRUCTOR
+const myArr = [1, 2, 3];
 
-// New Instance of Constructor
-const haloReach = new MultiplayerGame(
-  "Team Hardcore",
-  "Team Slayer",
-  "Countdown",
-  "PLACEHOLDER"
-);
+const myArr2 = new Array();
+// Array Prototype has a built in function, push();
+myArr2.push(1, 2, 3);
 
-// Use Prototype to Create Method
-MultiplayerGame.prototype.getMapDetails = function() {
-  let i = 0;
-  for (i = 0; i < this.callouts.length; i++) {}
-  return `${this.map} has the ${this.gamemode} gamemode and contains ${i} callouts: ${this.callouts}.`;
-};
+myArr.push(39);
 
-// Log Results
-console.log(haloReach.getMapDetails());
-
-// Use Prototype to Create Add Method
-MultiplayerGame.prototype.addMapCallout = function(mapCallout) {
-  let i = 0;
-  for (i = 0; i < this.callouts.length; i++) {}
-  this.callouts[i] = mapCallout;
-};
-
-// Log New Method and Check Results
-haloReach.addMapCallout("TOP MID");
-console.log(haloReach.getMapDetails());
-
-// Override Prototype
-haloReach.addMapCallout = function() {
-  return "Just overidding a prototype method";
-};
-// Log Prototype Override
-console.log(haloReach.addMapCallout());
+console.log(myArr, myArr2);
