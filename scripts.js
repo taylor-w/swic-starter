@@ -1,40 +1,16 @@
-// Array Method Practice
-const strAndNumArr = [1, 2, "Hello", 3, 4, "World", 5, "YoYo!"];
-const strArr = [];
-const numArr = [];
+// Using Date Constructor and Instance
+const today = new Date();
+const parsedDate = Date.parse(today);
+const d = Date.parse("Apr 7 2020");
+const d0 = Date.parse("7 April 2020 UTC");
 
-for (let i = 0; i < strAndNumArr.length; i += 1) {
-  if (typeof strAndNumArr[i] === "string") {
-    strArr.push(strAndNumArr[i]);
-  } else {
-    numArr.push(strAndNumArr[i]);
-  }
-}
+console.log(today, parsedDate, d, d0);
 
-console.log(strArr);
-console.log(numArr);
+/* At this point, we have one instance of Date() called 'today'
+along with 3 different variables using the Date() constructor. */
 
-// indexOf
-// lastIndexOf
-// includes
+// Showing our instance object
+console.log(`Today is ${typeof today}`);
 
-/* Pretty familiar with these methods, a lot of practice
-utilizing this logic in other languages.*/
-
-// TODO: Replace 'strawberry' with 'pumpkin'
-// Array
-const fruitArr = ["apple", "pineapple", "banana", "strawberry", "orange"];
-
-// IF Element Exists
-if (fruitArr.includes("strawberry")) {
-  let strawIndex = fruitArr.indexOf("strawberry");
-  fruitArr.splice(strawIndex, 1, "pumpkin");
-} else {
-  console.log("element: strawberry not found.");
-}
-
-console.log(fruitArr);
-/* Load Index into new variable. NOTE: Could have used
-  lastIndexOf instead, like below.*/
-// fruitArr.splice(fruitArr.lastIndexOf("strawberry"), 1, "pumpkin");
-// console.log(fruitArr);
+// Instance Object
+console.log(today.getFullYear());
