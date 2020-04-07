@@ -1,10 +1,13 @@
-// Array is a FUNCTION CONSTRUCTOR
-const myArr = [1, 2, 3];
+// Using Different Methods of Array Prototype
+// Array
+const mapCallouts = ["top mid", "bot mid", "lift landing"];
 
-const myArr2 = new Array();
-// Array Prototype has a built in function, push();
-myArr2.push(1, 2, 3);
-
-myArr.push(39);
-
-console.log(myArr, myArr2);
+// PUSH METHOD
+// Log
+console.log(mapCallouts);
+// Array Prototype Function: PUSH
+mapCallouts.push("gold one"); // PUSH element into array
+// Log
+console.log(mapCallouts);
+// Check value RETURN from PUSH
+console.log(mapCallouts.push("gold one")); // RETURNS Array.length
