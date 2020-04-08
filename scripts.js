@@ -10,6 +10,7 @@ function diceRoll(diceNum = 2, diceSides = 6) {
   for (let i = 0; i < diceNum; i++) {
     roll.push(getRanIntInclusive(1, diceSides));
   }
+  // 2 Values Rolled with 2 Six-Sided Die
   return roll;
 }
 
@@ -17,6 +18,7 @@ function diceTotal(roll) {
   roll = diceRoll();
   let die1 = roll[0];
   let die2 = roll[1];
+  // What was rolled
   return die1 + die2;
 }
 
@@ -26,19 +28,29 @@ function pass(value) {
   let win = [7, 11];
   let loss = [2, 3, 12];
   let on = [1, 4, 5, 6, 8, 9, 10];
+  //test
   console.log(value);
-  if (value === win) {
+  if (win.includes(value)) {
     return "WINNER";
-  } else if (value === loss) {
+  } else if (loss.includes(value)) {
     return "LOSER";
   } else {
-    on = value;
     return on;
   }
 }
 //test
-let results = pass();
-console.log(results);
+console.log(pass());
+
+function assignOn(passValue) {
+  passValue = pass();
+  let ranIndex = getRanIntInclusive(0, 6);
+  console.log(ranIndex);
+  let on = passValue[ranIndex];
+  return on;
+}
+
+//test
+console.log(assignOn());
 
 // Craps game
 
