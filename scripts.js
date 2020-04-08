@@ -12,45 +12,49 @@ function diceRoll(diceNum = 2, diceSides = 6) {
   }
   // 2 Values Rolled with 2 Six-Sided Die
   return roll;
-}
 
-function diceTotal(roll) {
-  roll = diceRoll();
-  let die1 = roll[0];
-  let die2 = roll[1];
-  // What was rolled
-  return die1 + die2;
-}
+  function diceTotal(roll) {
+    roll = diceRoll();
+    let die1 = roll[0];
+    let die2 = roll[1];
+    // What was rolled
+    return die1 + die2;
+  }
 
-function pass(value) {
-  // Possible Outcomes
-  value = diceTotal();
-  let win = [7, 11];
-  let loss = [2, 3, 12];
-  let on = [1, 4, 5, 6, 8, 9, 10];
+  function pass(value) {
+    // Possible Outcomes
+    value = diceTotal();
+    let win = [7, 11];
+    let loss = [2, 3, 12];
+    let on = [1, 4, 5, 6, 8, 9, 10];
+    //test
+    console.log(value);
+    if (win.includes(value)) {
+      return "WINNER";
+    } else if (loss.includes(value)) {
+      return "LOSER";
+    } else {
+      return on;
+    }
+  }
+
   //test
-  console.log(value);
-  if (win.includes(value)) {
-    return "WINNER";
-  } else if (loss.includes(value)) {
-    return "LOSER";
-  } else {
-    return on;
+  // console.log(pass());
+
+  function assignOn(passValue) {
+    passValue = pass();
+    if (typeof passValue !== "string") {
+      let ranIndex = getRanIntInclusive(0, 6);
+      console.log(ranIndex);
+      let on = passValue[ranIndex];
+      return on;
+    } else {
+      return passValue;
+    }
   }
 }
 //test
-console.log(pass());
-
-function assignOn(passValue) {
-  passValue = pass();
-  let ranIndex = getRanIntInclusive(0, 6);
-  console.log(ranIndex);
-  let on = passValue[ranIndex];
-  return on;
-}
-
-//test
-console.log(assignOn());
+// console.log(assignOn());
 
 // Craps game
 
