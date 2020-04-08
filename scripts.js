@@ -5,60 +5,40 @@ function getRanIntInclusive(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function diceRoll(diceNum = 2, diceSides = 6) {
+function firstRoll(diceNum = 2, diceSides = 6) {
   let roll = [];
   for (let i = 0; i < diceNum; i++) {
     roll.push(getRanIntInclusive(1, diceSides));
   }
-  // 2 Values Rolled with 2 Six-Sided Die
-  // return roll;
-
-  // function diceTotal(roll) {
-  // roll = diceRoll();
+  // Two Dice Rolled
   let die1 = roll[0];
   let die2 = roll[1];
+  // Total of Two Dice Rolled
   let value = die1 + die2;
-  // What was rolled
-  // return die1 + die2;
-  // }
-  // }
-  //   function pass(value) {
-  //     // Possible Outcomes
-  //     value = diceTotal();
+  // Winner Values
   let win = [7, 11];
+  // Loser Values
   let loss = [2, 3, 12];
+  // Marked 'on'
   let on = [1, 4, 5, 6, 8, 9, 10];
-  /* TEST */
-  console.log(value);
+  // Player Rolls Winning Value
   if (win.includes(value)) {
-    return "WINNER";
+    let winValue = value;
+    return winValue;
+    // Player Rolls Losing Value
   } else if (loss.includes(value)) {
-    return "LOSER";
+    let loseValue = value;
+    return loseValue;
+    // Player Rolls Again
   } else {
-    //   return on;
-    // }
-    // }
-
-    //test
-    // console.log(pass());
-
-    // function assignOn(passValue) {
-    //   passValue = pass();
-    //   if (typeof passValue !== "string") {
     let ranIndex = getRanIntInclusive(0, 6);
-    /* TEST */
-    console.log(ranIndex);
+    // 'on' Value Gets Randomly Selected from Possible 'on' Values
     let onValue = on[ranIndex];
-    /* TEST */
-    console.log(onValue);
     return onValue;
-    // } else {
-    //   return passValue;
-    // }
   }
 }
 /* TEST */
-console.log(diceRoll());
+console.log(firstRoll());
 
 // Craps game
 
