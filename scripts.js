@@ -10,11 +10,6 @@ const crapsRolls = {
   // On Values
   on: [1, 4, 5, 6, 8, 9, 10],
   onValue: 0,
-  // On Pass Roll
-  passRoll: {
-    winValue: (crapsRolls.loss.concat(crapsRolls.on).push(11)),
-    lossValue: 7
-  },
   numOfRolls: 0
 };
 
@@ -34,9 +29,6 @@ function diceRoll(diceNum = 2, diceSides = 6) {
   let die2 = roll[1];
   // Total of Two Dice Rolled
   let value = die1 + die2;
-  // Count Number of Rolls
-  crapsRolls.numOfRolls++;
-  console.log(crapsRolls.numOfRolls);
   // Player Rolls Winning Value
   if (crapsRolls.win.includes(value)) {
     crapsRolls.winValue = value;
@@ -53,7 +45,8 @@ function diceRoll(diceNum = 2, diceSides = 6) {
     return crapsRolls.onValue;
   }
 }
-
+// Add to numOfRolls
+crapsRolls.numOfRolls++;
 // Game Results
 if (crapsRolls.win.indexOf(diceRoll()) !== -1) {
   console.log(
@@ -72,7 +65,6 @@ if (crapsRolls.win.indexOf(diceRoll()) !== -1) {
       ` Dealer marked ${crapsRolls.onValue} as the point number. Player must roll a ${crapsRolls.onValue} to win.`
   );
   diceRoll();
-  if ()
 }
 
 // Use bets for pass => roll will total 7 or 11
