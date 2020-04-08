@@ -11,50 +11,54 @@ function diceRoll(diceNum = 2, diceSides = 6) {
     roll.push(getRanIntInclusive(1, diceSides));
   }
   // 2 Values Rolled with 2 Six-Sided Die
-  return roll;
+  // return roll;
 
-  function diceTotal(roll) {
-    roll = diceRoll();
-    let die1 = roll[0];
-    let die2 = roll[1];
-    // What was rolled
-    return die1 + die2;
-  }
+  // function diceTotal(roll) {
+  // roll = diceRoll();
+  let die1 = roll[0];
+  let die2 = roll[1];
+  let value = die1 + die2;
+  // What was rolled
+  // return die1 + die2;
+  // }
+  // }
+  //   function pass(value) {
+  //     // Possible Outcomes
+  //     value = diceTotal();
+  let win = [7, 11];
+  let loss = [2, 3, 12];
+  let on = [1, 4, 5, 6, 8, 9, 10];
+  /* TEST */
+  console.log(value);
+  if (win.includes(value)) {
+    return "WINNER";
+  } else if (loss.includes(value)) {
+    return "LOSER";
+  } else {
+    //   return on;
+    // }
+    // }
 
-  function pass(value) {
-    // Possible Outcomes
-    value = diceTotal();
-    let win = [7, 11];
-    let loss = [2, 3, 12];
-    let on = [1, 4, 5, 6, 8, 9, 10];
     //test
-    console.log(value);
-    if (win.includes(value)) {
-      return "WINNER";
-    } else if (loss.includes(value)) {
-      return "LOSER";
-    } else {
-      return on;
-    }
-  }
+    // console.log(pass());
 
-  //test
-  // console.log(pass());
-
-  function assignOn(passValue) {
-    passValue = pass();
-    if (typeof passValue !== "string") {
-      let ranIndex = getRanIntInclusive(0, 6);
-      console.log(ranIndex);
-      let on = passValue[ranIndex];
-      return on;
-    } else {
-      return passValue;
-    }
+    // function assignOn(passValue) {
+    //   passValue = pass();
+    //   if (typeof passValue !== "string") {
+    let ranIndex = getRanIntInclusive(0, 6);
+    /* TEST */
+    console.log(ranIndex);
+    let onValue = on[ranIndex];
+    /* TEST */
+    console.log(onValue);
+    return onValue;
+    // } else {
+    //   return passValue;
+    // }
   }
 }
-//test
-// console.log(assignOn());
+/* TEST */
+console.log(diceRoll());
 
 // Craps game
 
