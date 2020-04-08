@@ -23,18 +23,23 @@ function diceTotal(roll) {
 function pass(value) {
   // Possible Outcomes
   value = diceTotal();
-  let pass = 7 || 11;
-  let loss = 2 || 3 || 12;
-  let on = !pass && !loss;
-  if (value == pass) {
+  let win = [7, 11];
+  let loss = [2, 3, 12];
+  let on = [1, 4, 5, 6, 8, 9, 10];
+  console.log(value);
+  if (value === win) {
     return "WINNER";
-  } else if (value == loss) {
+  } else if (value === loss) {
     return "LOSER";
   } else {
     on = value;
     return on;
   }
 }
+//test
+let results = pass();
+console.log(results);
+
 // Craps game
 
 // Use bets for pass => roll will total 7 or 11
@@ -52,4 +57,3 @@ function pass(value) {
 // End Loop
 
 // Reward/Take 'bet' based on game outcome
-console.log(dieValue());
