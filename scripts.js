@@ -1,84 +1,51 @@
-// 3/3 - 5pts
-// Craps Object
-const crapsRolls = {
-  // Winner Values
-  win: [7, 11],
-  winValue: 0,
-  // Loser Values
-  loss: [2, 3, 12],
-  loseValue: 0,
-  // On Values
-  on: [1, 4, 5, 6, 8, 9, 10],
-  onValue: 0,
-  numOfRolls: 0
-};
+// DESTRUCTING
+/* We can extra/pull data from arrays, properties from objects, using DESTRUCTING */
 
-function getRanIntInclusive(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+const intro = ["Hello", "I", "am", "Taylor"];
+const greet = intro[0];
+const name = intro[3];
+console.log(greet, name);
 
-function diceRoll(diceNum = 2, diceSides = 6) {
-  let roll = [];
-  for (let i = 0; i < diceNum; i++) {
-    roll.push(getRanIntInclusive(1, diceSides));
-  }
-  // Two Dice Rolled
-  let die1 = roll[0];
-  let die2 = roll[1];
-  // Total of Two Dice Rolled
-  let value = die1 + die2;
-  // Player Rolls Winning Value
-  if (crapsRolls.win.includes(value)) {
-    crapsRolls.winValue = value;
-    return crapsRolls.winValue;
-    // Player Rolls Losing Value
-  } else if (crapsRolls.loss.includes(value)) {
-    crapsRolls.loseValue = value;
-    return crapsRolls.loseValue;
-    // Player Rolls Again
-  } else {
-    let ranIndex = getRanIntInclusive(0, 6);
-    // 'on' Value Gets Randomly Selected from Possible 'on' Values
-    crapsRolls.onValue = crapsRolls.on[ranIndex];
-    return crapsRolls.onValue;
-  }
-}
-// Add to numOfRolls
-crapsRolls.numOfRolls++;
-// Game Results
-if (crapsRolls.win.indexOf(diceRoll()) !== -1) {
-  console.log(
-    `Player WON on dice roll number ${crapsRolls.numOfRolls}` +
-      ` with the winning roll value of ${crapsRolls.winValue}`
-  );
-} else if (crapsRolls.loss.indexOf(diceRoll()) !== -1) {
-  console.log(
-    `Player LOST on dice roll number ${crapsRolls.numOfRolls}` +
-      ` with the losing roll value of ${crapsRolls.loseValue}`
-  );
-} else {
-  console.log(
-    `Player rolled ${crapsRolls.onValue}` +
-      ` on dice roll number ${crapsRolls.numOfRolls}.` +
-      ` Dealer marked ${crapsRolls.onValue} as the point number. Player must roll a ${crapsRolls.onValue} to win.`
-  );
-  diceRoll();
-}
+// Big Review, assigning value at specified element within array to variable.
 
-// Use bets for pass => roll will total 7 or 11
+const [greeting, pronoun] = intro;
+console.log(greeting);
+console.log(pronoun);
 
-// UpperBound: 12
-// IF 2, 3, 12 => bet is outright lost
-// ELSE IF 7, 11 => bet is outright won
-// ELSE => 1, 4, 5, 6, 8, 9, 10
-// MARK one of ELSE numbers
-// LowerBound: 1
+/* On line 12, we assign 'greeting' and 'pronoun' to their respective locations within the array, 'intro'. This is an introductory version of using DESTRUCTING */
 
-// Start Loop
-// IF roll hits MARK => WIN
-// ELSE roll until MARK hit || 7 => LOSS
-// End Loop
+/* Another way of doing the same thing. */
 
-// Reward/Take 'bet' based on game outcome
+const [greeting2, , , name2] = intro;
+console.log(greeting2);
+console.log(name2);
+
+/* The commas ', , ,' skip elements within the array. */
+
+const [, pronoun2, , name3] = intro;
+console.log(pronoun2);
+console.log(name3);
+
+/* Comma skips element, assigns element to variable. another comma separates the first variable from the second variable assignment, same comma logic applies. */
+
+const [greeting3, ...intro2] = intro;
+console.log(greeting3);
+console.log(intro2);
+
+/* Using the 'rest' to assign multiple elements into a new variable. */
+
+/* You can use Default Values to default values to variables  */
+
+const [sayingHi = "hi", exName = "tay"] = ["hello"];
+console.log(sayingHi);
+console.log(exName);
+
+/* First element in array assigned to first variable, second element doesn't exist in array so the default value assigned to 'exName' is used. */
+
+let a = 3;
+let b = 6;
+
+[a, b] = [b, a];
+
+console.log(a);
+console.log(b);
