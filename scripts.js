@@ -25,6 +25,10 @@ document.querySelector("form").addEventListener("submit", e => {
   console.log(email.value);
   // getter example
   console.log(document.querySelector("p").textContent);
+  console.log(document.querySelector("h1").textContent);
   // setter example
   document.querySelector("p").textContent = `${uname.value} - ${email.value}`;
+  document.querySelector("h1").textContent = "Username and Email submitted.";
 });
+
+console.log(document.querySelector("li"));
