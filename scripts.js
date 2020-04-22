@@ -32,7 +32,12 @@ document.querySelector("form").addEventListener("submit", e => {
   document.querySelector("p").textContent = `${uname.value} - ${email.value}`;
   document.querySelector("h1").textContent = "Username and Email submitted.";
 });
-
+// Logging results
 console.log(listItem);
 console.log(typeof listItem); // The "li", list item, is an object!
 console.log(unorderList);
+
+// Loop through items within unorderedList
+for (let i = 0; i < listItem.length; i++) {
+  console.log(listItem[i].textContent);
+}
