@@ -1,6 +1,7 @@
 // variable to hold element passed to querySelector
 const uname = document.querySelector("#username");
 const email = document.querySelector("#email");
+const listItem = document.querySelector("li");
 
 // focus event
 uname.addEventListener("focus", () => {
@@ -31,4 +32,5 @@ document.querySelector("form").addEventListener("submit", e => {
   document.querySelector("h1").textContent = "Username and Email submitted.";
 });
 
-console.log(document.querySelector("li"));
+console.log(listItem);
+console.log(typeof listItem); // The "li", list item, is an object!
